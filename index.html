@@ -1,11 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>WDD 131 | Fundamentos da Web Dinâmica - Elinor</title>
+
+    <meta name="description"
+        content="WDD 131 | Fundamentos da Web Dinâmica. Página pessoal de Elinor, apresentando informações pessoais, estudos, interesses e minha região.">
+
+    <meta name="author" content="Elinor">
+
+    <link rel="stylesheet" href="estilos/base.css">
+
+    <script src="scripts/obterdatas.js" defer></script>
 </head>
+
 <body>
-    <h1>Eukary Franco</h1>
+
+    <!-- CABEÇALHO -->
+    <header>
+
+        <span id="titulo-curso">
+            WDD131 | Fundamentos da Web Dinâmica
+        </span>
+
+        <!-- MENU DE NAVEGAÇÃO -->
+        <nav>
+            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+
+            <a href="https://www.churchofjesuschrist.org/study/scriptures?lang=por"
+                target="_blank">Escrituras</a>
+
+            <a href="#">Projeto Final</a>
+        </nav>
+
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <h1>Eukary Franco</h1>
+
+        <!-- PRIMEIRO CARTÃO -->
+        <section class="card">
+
+            <h2>Sobre Mim</h2>
+
+            <img src="img/eukary.jpeg" alt="Foto de Eukary Franco">
+
+            <p>
+                Olá! Meu nome é Eukary Franco. Sou estudante de Engenharia de Software
+                e tenho interesse em tecnologia, programação e desenvolvimento
+                web. Estou aprendendo HTML, CSS e JavaScript e buscando
+                desenvolver minhas habilidades na área de tecnologia.
+            </p>
+
+            <p>
+                Gosto de aprender coisas novas, explorar minha criatividade
+                e descobrir como a tecnologia pode transformar ideias em
+                soluções úteis para as pessoas.
+            </p>
+
+        </section>
+
+        <!-- SEGUNDO CARTÃO -->
+        <section class="card">
+
+            <h2>Minha Região</h2>
+
+            <img src="img/saopaulo.jpg" alt="Paisagem de São Paulo, Brasil">
+
+            <p>
+                Moro no estado de São Paulo, localizado na região Sudeste
+                do Brasil. São Paulo é conhecido por sua diversidade cultural,
+                desenvolvimento econômico e grande variedade de oportunidades.
+            </p>
+
+            <p>
+                O estado possui cidades importantes, parques, áreas naturais,
+                centros culturais e diversos lugares interessantes para conhecer.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>
+            &copy; <span id="2026"></span> Eukary Franco | São Paulo, Brasil
+        </p>
+
+        <p id="ultimaModificacao"></p>
+
+    </footer>
+
 </body>
 </html>

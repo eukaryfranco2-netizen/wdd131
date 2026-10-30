@@ -1,0 +1,206 @@
+
+/*   1. IMPORTAÇÃO DAS FONTES */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap');
+
+
+/* 2. VARIÁVEIS DE CORES */
+
+:root {
+    --cor-principal: #7f0634;
+    --cor-secundaria: #F5EBDD;
+    --cor-fundo: #FAF8F5;
+    --cor-branco: #FFFFFF;
+    --cor-texto: #292329;
+    --cor-destaque: #53001d;
+}
+
+
+/* 3. CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+
+/* 4. CABEÇALHO */
+
+header {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    padding: 25px 20px;
+    text-align: center;
+}
+
+/* Título do curso */
+
+#titulo-curso {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+/* 5. MENU DE NAVEGAÇÃO */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+
+nav a:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+}
+
+
+/*  6. CONTEÚDO PRINCIPAL */
+
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Título principal */
+
+main h1 {
+    grid-column: 1 / -1;
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-principal);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+/* 7. CARTÕES*/
+
+.card {
+    background-color: var(--cor-branco);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #E8DFD9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Títulos dos cartões */
+
+.card h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-principal);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Imagens dos cartões */
+
+.card img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+}
+
+/* Textos dos cartões */
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+
+/*8. RODAPÉ*/
+
+footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+
+
+/*9. RESPONSIVIDADE*/
+
+
+@media screen and (max-width: 600px) {
+
+    /* Menu vertical */
+
+    nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Uma coluna nos cartões */
+
+    main {
+        grid-template-columns: 1fr;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    main h1 {
+        grid-column: auto;
+        font-size: 1.6rem;
+    }
+
+    /* Ajuste do título do curso */
+
+    #titulo-curso {
+        font-size: 1.3rem;
+    }
+
+    /* Ajuste dos cartões */
+
+    .card {
+        padding: 18px;
+    }
+
+    .card img {
+        height: 180px;
+    }
+}
