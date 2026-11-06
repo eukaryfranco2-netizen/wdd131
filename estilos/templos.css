@@ -52,7 +52,7 @@ display: none;                 /* escondido no celular */
 width: 100%;
 }
 
-nav.aberto {                     /* classe que o JS vai alternar */
+nav.aberto {                     
 display: flex;
 flex-direction: column;
 }
