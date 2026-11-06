@@ -1,29 +1,80 @@
-@media (min-width: 700px) {
-  /* Botão some: o menu fica sempre visível */
-  #menu {
-    display: none;
-  }
 
-  header {
-    flex-wrap: nowrap;
-  }
+/* ===== TELAS GRANDES ===== */
 
-  /* "nav.aberto" também aparece aqui para a regra valer
-     mesmo se o menu ficou aberto antes de aumentar a janela */
-nav,
-nav.aberto {
-    display: flex;
-    flex-direction: row;
-    width: auto;
-  }
+@media screen and (min-width: 700px) {
 
-nav a {
-    border-top: none;
-border-left: 1px solid rgba(255, 255, 255, 0.25);
-}
+    /* CONFIGURAÇÃO DA PÁGINA */
 
-  /* Colunas automáticas: no mínimo 250px cada */
-.galeria {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
+    body {
+        max-width: 860px;
+        margin: 48px auto 0;
+        border: 1px solid #ccc;
+        background-color: white;
+    }
+
+    /* CABEÇALHO */
+
+    header {
+        flex-wrap: nowrap;
+        padding: 1rem;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+    }
+
+    /* ESCONDER BOTÃO HAMBÚRGUER */
+
+    #menu {
+        display: none;
+    }
+
+    /* MENU DE NAVEGAÇÃO */
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        width: auto;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        border-top: none;
+        font-size: 18px;
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+
+    main {
+        padding: 1.5rem 1rem 2.5rem;
+    }
+
+    main h1 {
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+
+    /* GALERIA COM TRÊS COLUNAS */
+
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px 12px;
+        max-width: 686px;
+    }
+
+    /* IMAGENS */
+
+    figure img {
+        height: 138px;
+    }
+
+    /* RODAPÉ */
+
+    footer {
+        margin-top: 1rem;
+        padding: 0.5rem;
+    }
+
 }

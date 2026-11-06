@@ -1,127 +1,146 @@
-/* ===== Cores: troque pelas suas ===== */
+
+/* ===== CORES DO PROJETO ===== */
+
 :root {
---cor-principal: #1f3a5f;   /* header e footer */
---cor-texto: #222222;
---cor-fundo: #f5f7fa;
---cor-destaque: #e0a030;    /* hover do menu */
---cor-claro: #ffffff;
+    --cor-principal: #430b68;
+    --cor-texto: #222222;
+    --cor-fundo: #ffffff;
+    --cor-destaque: #e0a030;
+    --cor-claro: #ffffff;
 }
 
-/* ===== Base ===== */
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+
 * {
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-margin: 0;
-font-family: "Roboto", sans-serif; /* use a fonte que você escolheu */
-color: var(--cor-texto);
-background-color: var(--cor-fundo);
-line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.5;
 }
 
-/* ===== Header ===== */
+/* ===== CABEÇALHO ===== */
+
 header {
-display: flex;
-flex-wrap: wrap;               /* o nav cai para a linha de baixo */
-justify-content: space-between;
-align-items: center;
-padding: 1rem;
-background-color: var(--cor-principal);
-color: var(--cor-claro);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--cor-principal);
+    color: var(--cor-claro);
 }
 
 header h2 {
-margin: 0;
-font-size: 1.5rem;
+    margin: 0;
+    font-size: 1.5rem;
 }
 
-/* ===== Botão hambúrguer ===== */
+/* ===== BOTÃO HAMBÚRGUER ===== */
+
 #menu {
-background: none;
-border: none;
-color: inherit;
-font-size: 2rem;
-line-height: 1;
-cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--cor-claro);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
 }
 
-/* ===== Navegação ===== */
+/* ===== NAVEGAÇÃO ===== */
+
 nav {
-display: none;                 /* escondido no celular */
-width: 100%;
+    display: none;
+    width: 100%;
 }
 
-nav.aberto {                     
-display: flex;
-flex-direction: column;
+nav.aberto {
+    display: flex;
+    flex-direction: column;
 }
 
 nav a {
-padding: 0.75rem 1rem;
-color: var(--cor-claro);
-text-decoration: none;
-border-top: 1px solid rgba(255, 255, 255, 0.25);
-transition: background-color 0.3s, color 0.3s;
+    padding: 0.75rem 1rem;
+    color: var(--cor-claro);
+    text-decoration: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-background-color: var(--cor-destaque);
-color: var(--cor-principal);
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
 }
 
-/* ===== Main ===== */
+/* ===== CONTEÚDO PRINCIPAL ===== */
+
 main {
-max-width: 1000px;
-margin: 0 auto;
-padding: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2.5rem;
 }
 
 main h1 {
-text-align: center;
-color: var(--cor-principal);
+    text-align: center;
+    color: var(--cor-texto);
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
-/* ===== Galeria (Grid: 1 coluna no celular) ===== */
+/* ===== GALERIA DE FOTOS ===== */
+
 .galeria {
-display: grid;
-grid-template-columns: 1fr;
-gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    max-width: 686px;
+    margin: 0 auto;
 }
+
+/* ===== FIGURAS ===== */
 
 figure {
-margin: 0;
-background-color: var(--cor-claro);
-border-radius: 8px;
-overflow: hidden;
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    margin: 0;
+    text-align: center;
+    background-color: var(--cor-claro);
+    overflow: hidden;
 }
 
 figure img {
-display: block;
-width: 100%;
-height: auto;
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 figcaption {
-padding: 0.5rem;
-text-align: center;
-font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 13px;
+    color: var(--cor-principal);
 }
 
-/* ===== Footer ===== */
+/* ===== RODAPÉ ===== */
+
 footer {
-margin-top: 1rem;
-padding: 1rem;
-background-color: var(--cor-principal);
-color: var(--cor-claro);
-text-align: center;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: var(--cor-principal);
+    color: var(--cor-claro);
+    text-align: center;
 }
 
 footer p {
-margin: 0;
+    margin: 0;
+    font-size: 12px;
 }
 
 footer p:last-child {
-font-size: 0.85rem;
+    font-size: 10px;
 }
