@@ -1,0 +1,127 @@
+/* ===== Cores: troque pelas suas ===== */
+:root {
+--cor-principal: #1f3a5f;   /* header e footer */
+--cor-texto: #222222;
+--cor-fundo: #f5f7fa;
+--cor-destaque: #e0a030;    /* hover do menu */
+--cor-claro: #ffffff;
+}
+
+/* ===== Base ===== */
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: "Roboto", sans-serif; /* use a fonte que você escolheu */
+color: var(--cor-texto);
+background-color: var(--cor-fundo);
+line-height: 1.5;
+}
+
+/* ===== Header ===== */
+header {
+display: flex;
+flex-wrap: wrap;               /* o nav cai para a linha de baixo */
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+background-color: var(--cor-principal);
+color: var(--cor-claro);
+}
+
+header h2 {
+margin: 0;
+font-size: 1.5rem;
+}
+
+/* ===== Botão hambúrguer ===== */
+#menu {
+background: none;
+border: none;
+color: inherit;
+font-size: 2rem;
+line-height: 1;
+cursor: pointer;
+}
+
+/* ===== Navegação ===== */
+nav {
+display: none;                 /* escondido no celular */
+width: 100%;
+}
+
+nav.aberto {                     /* classe que o JS vai alternar */
+display: flex;
+flex-direction: column;
+}
+
+nav a {
+padding: 0.75rem 1rem;
+color: var(--cor-claro);
+text-decoration: none;
+border-top: 1px solid rgba(255, 255, 255, 0.25);
+transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+background-color: var(--cor-destaque);
+color: var(--cor-principal);
+}
+
+/* ===== Main ===== */
+main {
+max-width: 1000px;
+margin: 0 auto;
+padding: 1rem;
+}
+
+main h1 {
+text-align: center;
+color: var(--cor-principal);
+}
+
+/* ===== Galeria (Grid: 1 coluna no celular) ===== */
+.galeria {
+display: grid;
+grid-template-columns: 1fr;
+gap: 1rem;
+}
+
+figure {
+margin: 0;
+background-color: var(--cor-claro);
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+figure img {
+display: block;
+width: 100%;
+height: auto;
+}
+
+figcaption {
+padding: 0.5rem;
+text-align: center;
+font-weight: bold;
+}
+
+/* ===== Footer ===== */
+footer {
+margin-top: 1rem;
+padding: 1rem;
+background-color: var(--cor-principal);
+color: var(--cor-claro);
+text-align: center;
+}
+
+footer p {
+margin: 0;
+}
+
+footer p:last-child {
+font-size: 0.85rem;
+}

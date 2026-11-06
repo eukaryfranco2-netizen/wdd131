@@ -1,0 +1,29 @@
+@media (min-width: 700px) {
+  /* Botão some: o menu fica sempre visível */
+  #menu {
+    display: none;
+  }
+
+  header {
+    flex-wrap: nowrap;
+  }
+
+  /* "nav.aberto" também aparece aqui para a regra valer
+     mesmo se o menu ficou aberto antes de aumentar a janela */
+nav,
+nav.aberto {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+
+nav a {
+    border-top: none;
+border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+  /* Colunas automáticas: no mínimo 250px cada */
+.galeria {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+}
