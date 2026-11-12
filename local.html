@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do País | WDD 131</title>
+    <meta name="description" content="Página sobre Venezuela: dados gerais e clima.">
+
+    <!-- TODO: se escolher uma fonte do Google Fonts, coloque o link aqui (só os pesos necessários) -->
+
+    <link rel="stylesheet" href="estilos/local.css">
+    <script src="scripts/local.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Venezuela</h1>
+    </header>
+
+    <main>
+        <div class="principal">
+            <picture>
+                <source srcset="imagens/salto-angel-venezuela.webp" media="(min-width: 1000px)">
+                <source srcset="imagens/salto-angel-venezuela.webp" media="(min-width: 500px)">
+                <img src="imagens/salto-angel-venezuela.webp" alt="SaltoAngel" width="500" height="250">
+            </picture>
+        </div>
+
+        <!-- Seção de dados -->
+        <section class="dados">
+            <h2>Dados</h2>
+            <ul>
+                <li><strong>Capital:</strong> Caracas</li>
+                <li><strong>População:</strong> 28.4 milhões (2021)</li>
+                <li><strong>Idioma:</strong> Espanhol</li>
+                <li><strong>Moeda:</strong> Bolívar (VES)</li>
+            </ul>
+        </section>
+
+        <!-- Seção de clima -->
+        <section class="clima">
+            <h2>Clima</h2>
+            <ul>
+                <li><strong>Temperatura:</strong><span id="temperatura"> 28</span>°C</li>
+                <li><strong>Condições:</strong> Nublado</li>
+                <li><strong>Vento:</strong> <span id="vento">10</span> km/h</li>
+                <li><strong>Sensação térmica:</strong> 26<span id="sensacao">ºC</span></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="anoAtual"></span> Eukary Franco | Brasil</p>
+        <p>Última modificação: <span id="ultimaModificacao"></span></p>
+    </footer>
+
+</body>
+</html>

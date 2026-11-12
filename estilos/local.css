@@ -1,0 +1,136 @@
+:root {
+    --cor-principal: #090165;
+    --cor-destaque: #a70d27;
+    --cor-fundo: #ffffff;
+    --cor-fundo-secao: #f1f5f2;
+    --cor-texto: #1b1b1b;
+
+    --fonte-base: Arial, Helvetica, sans-serif; /* TODO: troque se usar o Google Fonts */
+    --espaco: 1rem;
+    --borda: 1px solid #777;
+}
+
+/* Base (visão móvel primeiro) */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fonte-base);
+    line-height: 1.5;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+header {
+    padding: var(--espaco);
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    text-align: center;
+}
+
+h1,
+h2 {
+    margin: 0 0 var(--espaco);
+}
+
+h2 {
+    color: var(--cor-principal);
+    border-bottom: 2px solid var(--cor-destaque);
+    padding-bottom: 0.25rem;
+}
+
+main {
+    padding: var(--espaco);
+}
+
+/* Imagem principal */
+.principal img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Seções */
+.dados,
+.clima {
+    margin-top: var(--espaco);
+    padding: var(--espaco);
+    background-color: var(--cor-fundo-secao);
+    border: var(--borda);
+    border-radius: 6px;
+}
+
+ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+li {
+    margin-bottom: 0.25rem;
+}
+
+/* Ícone SVG do clima: aparece só na visão móvel */
+.icone-clima {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Rodapé */
+footer {
+    padding: var(--espaco);
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    text-align: center;
+}
+
+footer p {
+    margin: 0 0 0.25rem;
+}
+
+/* Visão larga */
+@media (min-width: 700px) {
+    header {
+        text-align: left;
+        padding: var(--espaco) 2rem;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--espaco);
+        padding: 2rem;
+    }
+
+/* A imagem ocupa as duas colunas */
+    .principal {
+        grid-column: 1 / -1;
+    }
+
+    .dados,
+    .clima {
+        margin-top: 0;
+    }
+
+/* Na visão larga, o ícone vem de um pseudoelemento (emoji) depois do título "Clima" */
+    .icone-clima {
+        display: none;
+    }
+
+    .clima h2::after {
+        content: " ⛅";
+    }
+
+    footer {
+        padding: var(--espaco) 2rem;
+    }
+}
+
+/* Visão muito larga */
+@media (min-width: 1000px) {
+    main {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
