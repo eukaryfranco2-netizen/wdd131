@@ -6,7 +6,7 @@ document.querySelector('#ultimaModificacao').textContent = document.lastModified
 const temperatura = 8;   // °C
 const velocidadeVento = 10; // km/h
 
-// Fórmula de sensação térmica (métrica: °C e km/h), em uma única linha
+// Fórmula de sensação térmica (métrica: °C e km/h), em uma única line
 const calcularSensacaoTermica = (temp, vento) => 13.12 + 0.6215 * temp - 11.37 * Math.pow(vento, 0.16) + 0.3965 * temp * Math.pow(vento, 0.16);
 
 // Só calcula se as condições forem atendidas: temperatura <= 10 °C e vento > 4,8 km/h
