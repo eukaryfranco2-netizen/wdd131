@@ -1,9 +1,5 @@
-
 /* ===== TELAS GRANDES ===== */
-
 @media screen and (min-width: 700px) {
-
-    /* CONFIGURAÇÃO DA PÁGINA */
 
     body {
         max-width: 860px;
@@ -11,8 +7,6 @@
         border: 1px solid #ccc;
         background-color: white;
     }
-
-    /* CABEÇALHO */
 
     header {
         flex-wrap: nowrap;
@@ -23,14 +17,12 @@
         font-size: 1.5rem;
     }
 
-    /* ESCONDER BOTÃO HAMBÚRGUER */
-
+    /* esconde o botão hambúrguer */
     #menu {
         display: none;
     }
 
-    /* MENU DE NAVEGAÇÃO */
-
+    /* menu sempre visível, em linha */
     nav {
         display: flex;
         flex-direction: row;
@@ -45,36 +37,23 @@
         font-size: 18px;
     }
 
-    /* CONTEÚDO PRINCIPAL */
-
     main {
         padding: 1.5rem 1rem 2.5rem;
     }
 
-    main h1 {
-        font-size: 20px;
-        margin-bottom: 1rem;
-    }
-
-    /* GALERIA COM TRÊS COLUNAS */
-
-    .galeria {
+    /* três colunas */
+    #cartoes {
         grid-template-columns: repeat(3, 1fr);
         gap: 22px 12px;
         max-width: 686px;
     }
 
-    /* IMAGENS */
-
     figure img {
         height: 138px;
     }
-
-    /* RODAPÉ */
 
     footer {
         margin-top: 1rem;
         padding: 0.5rem;
     }
-
 }
