@@ -1,0 +1,80 @@
+
+/* ===== TELAS GRANDES ===== */
+
+@media screen and (min-width: 700px) {
+
+    /* CONFIGURAÇÃO DA PÁGINA */
+
+    body {
+        max-width: 860px;
+        margin: 48px auto 0;
+        border: 1px solid #ccc;
+        background-color: white;
+    }
+
+    /* CABEÇALHO */
+
+    header {
+        flex-wrap: nowrap;
+        padding: 1rem;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+    }
+
+    /* ESCONDER BOTÃO HAMBÚRGUER */
+
+    #menu {
+        display: none;
+    }
+
+    /* MENU DE NAVEGAÇÃO */
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        width: auto;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        border-top: none;
+        font-size: 18px;
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+
+    main {
+        padding: 1.5rem 1rem 2.5rem;
+    }
+
+    main h1 {
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+
+    /* GALERIA COM TRÊS COLUNAS */
+
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px 12px;
+        max-width: 686px;
+    }
+
+    /* IMAGENS */
+
+    figure img {
+        height: 138px;
+    }
+
+    /* RODAPÉ */
+
+    footer {
+        margin-top: 1rem;
+        padding: 0.5rem;
+    }
+
+}
