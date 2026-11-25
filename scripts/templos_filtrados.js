@@ -1,42 +1,42 @@
 // ===== DADOS =====
 const templos = [
-  // --- 7 templos fornecidos no enunciado ---
-  {
+// --- 7 templos fornecidos no enunciado ---
+{
     nomeDoTemplo: "Aba Nigeria",
     localizacao: "Aba, Nigéria",
     consagracao: "2005, 7 de agosto",
     area: 11500,
     urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
-  },
-  {
+},
+{
     nomeDoTemplo: "Manti Utah",
     localizacao: "Manti, Utah, Estados Unidos",
     consagracao: "1888, 21 de maio",
     area: 74792,
     urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
-  },
-  {
+},
+{
     nomeDoTemplo: "Payson Utah",
     localizacao: "Payson, Utah, Estados Unidos",
     consagracao: "2015, 7 de junho",
     area: 96630,
     urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
-  },
-  {
+},
+{
     nomeDoTemplo: "Yigo Guam",
     localizacao: "Yigo, Guam",
     consagracao: "2020, 2 de maio",
     area: 6861,
     urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
-  },
-  {
+},
+{
     nomeDoTemplo: "Washington D.C.",
     localizacao: "Kensington, Maryland, Estados Unidos",
     consagracao: "1974, 19 de novembro",
     area: 156558,
     urlDaImagem: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
-  },
-  {
+},
+{
     nomeDoTemplo: "Lima Peru",
     localizacao: "Lima, Peru",
     consagracao: "1986, 10 de janeiro",
@@ -136,22 +136,21 @@ function criarCartoes(lista) {
   lista.forEach((templo) => {
     const cartao = document.createElement("figure");
 
-    cartao.innerHTML = `
-      <h3>${templo.nomeDoTemplo}</h3>
-      <p><strong>Localização:</strong> ${templo.localizacao}</p>
-      <p><strong>Consagração:</strong> ${templo.consagracao}</p>
-      <p><strong>Área:</strong> ${templo.area.toLocaleString("pt-BR")} pés²</p>
-      <img src="${templo.urlDaImagem}" alt="${templo.nomeDoTemplo}" loading="lazy" width="400" height="250">
-    `;
+cartao.innerHTML = `
+<h3>${templo.nomeDoTemplo}</h3>
+<p><strong>Localização:</strong> ${templo.localizacao}</p>
+<p><strong>Consagração:</strong> ${templo.consagracao}</p>
+<p><strong>Área:</strong> ${templo.area.toLocaleString("pt-BR")} pés²</p>
+<img src="${templo.urlDaImagem}" alt="${templo.nomeDoTemplo}" loading="lazy" width="400" height="250">`;
 
     areaCartoes.appendChild(cartao);
-  });
+});
 }
 
 // ===== MARCA O LINK ATIVO NO MENU =====
 function marcarAtivo(link) {
-  document.querySelectorAll("nav a").forEach((a) => a.classList.remove("active"));
-  link.classList.add("active");
+document.querySelectorAll("nav a").forEach((a) => a.classList.remove("active"));
+link.classList.add("active");
 }
 
 // ===== EVENTOS DO MENU =====
@@ -162,39 +161,39 @@ const linkGrandes = document.querySelector("#grandes");
 const linkPequenos = document.querySelector("#pequenos");
 
 linkInicio.addEventListener("click", (e) => {
-  e.preventDefault();
-  marcarAtivo(linkInicio);
-  criarCartoes(templos);
+e.preventDefault();
+marcarAtivo(linkInicio);
+criarCartoes(templos);
 });
 
 linkAntigos.addEventListener("click", (e) => {
-  e.preventDefault();
-  marcarAtivo(linkAntigos);
-  criarCartoes(templos.filter((t) => pegarAno(t) < 1900));
+e.preventDefault();
+marcarAtivo(linkAntigos);
+criarCartoes(templos.filter((t) => pegarAno(t) < 1900));
 });
 
 linkNovos.addEventListener("click", (e) => {
-  e.preventDefault();
-  marcarAtivo(linkNovos);
-  criarCartoes(templos.filter((t) => pegarAno(t) > 2000));
+e.preventDefault();
+marcarAtivo(linkNovos);
+criarCartoes(templos.filter((t) => pegarAno(t) > 2000));
 });
 
 linkGrandes.addEventListener("click", (e) => {
-  e.preventDefault();
-  marcarAtivo(linkGrandes);
-  criarCartoes(templos.filter((t) => t.area > 90000));
+e.preventDefault();
+marcarAtivo(linkGrandes);
+criarCartoes(templos.filter((t) => t.area > 90000));
 });
 
 linkPequenos.addEventListener("click", (e) => {
-  e.preventDefault();
-  marcarAtivo(linkPequenos);
-  criarCartoes(templos.filter((t) => t.area < 10000));
+e.preventDefault();
+marcarAtivo(linkPequenos);
+criarCartoes(templos.filter((t) => t.area < 10000));
 });
 
 // ===== BOTÃO DO MENU (celular) =====
 const botaoMenu = document.querySelector("#menu");
 botaoMenu.addEventListener("click", () => {
-  document.querySelector("nav").classList.toggle("aberto");
+document.querySelector("nav").classList.toggle("aberto");
 });
 
 // ===== AO CARREGAR A PÁGINA: mostra todos =====

@@ -1,0 +1,156 @@
+:root {
+    --rosa: #C2185B;
+    --rosa-claro: #FCE4EC;
+    --rose: #A64B5C;
+    --cacau: #3A2A30;
+    --branco: #FFFFFF;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--cacau);
+    background: var(--branco);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--rosa);
+    color: var(--branco);
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+}
+
+header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+header p { margin: 0.25rem 0 1rem; }
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+header nav a {
+    color: var(--branco);
+    text-decoration: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid var(--branco);
+    font-size: 0.9rem;
+}
+
+header nav a:hover { background: var(--branco); color: var(--rosa); }
+
+main { max-width: 960px; margin: 0 auto; padding: 1rem; }
+
+section {
+    background: var(--rosa-claro);
+    border-left: 6px solid var(--rose);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+}
+
+h2, h3 { font-family: "Playfair Display", serif; color: var(--rosa); }
+h3 { color: var(--rose); }
+
+code { background: var(--branco); padding: 0 0.3rem; border-radius: 4px; }
+
+/* Logotipo */
+.logo-site {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--rosa);
+    background: var(--branco);
+    display: inline-block;
+    padding: 0.25rem 1.25rem;
+    border-radius: 12px;
+    margin: 0 0 0.5rem;
+}
+
+.logo-site span { color: var(--rose); }
+
+/* Cores */
+.cores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1rem;
+}
+
+.cor { background: var(--branco); border-radius: 8px; padding: 0.75rem; }
+.cor p { margin: 0; font-size: 0.9rem; }
+
+.amostra {
+    display: block;
+    height: 60px;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+    
+/* Tipografia */
+.fonte { background: var(--branco); border-radius: 8px; padding: 0.75rem 1rem; margin-bottom: 1rem; }
+.fonte p { margin: 0.25rem 0; }
+
+.exemplo-titulo {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    color: var(--rosa);
+}
+
+.exemplo-corpo { font-family: "Poppins", sans-serif; font-size: 1.1rem; }
+
+/* Wireframes */
+.wf {
+    background: var(--branco);
+    border: 2px dashed var(--rose);
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.wf-movel { max-width: 320px; margin-inline: auto; }
+
+.wf figcaption { font-size: 0.85rem; text-align: center; color: var(--rose); }
+
+.bloco {
+    background: #f3f3f3;
+    border: 1px solid #888;
+    border-radius: 4px;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--cacau);
+}
+
+.bloco.cabecalho { background: #e0e0e0; display: flex; justify-content: space-between; gap: 0.5rem; }
+.bloco.destaque { background: #ececec; padding: 2rem 0.75rem; }
+.bloco.titulo-bloco { background: var(--branco); font-weight: 600; }
+.bloco.cartao { padding: 1.5rem 0.75rem; }
+.bloco.rodape { background: #e0e0e0; }
+
+.linha { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+.grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+
+@media (max-width: 600px) {
+    header h1 { font-size: 1.8rem; }
+    .linha, .grade { grid-template-columns: 1fr; }
+}
+
+footer { background: var(--rosa); color: var(--branco); text-align: center; padding: 1rem; }
+footer p { margin: 0; }
