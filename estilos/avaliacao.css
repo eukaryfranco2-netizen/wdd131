@@ -1,0 +1,119 @@
+:root {
+    --cor-fundo: #f4f1fa;
+    --cor-card: #ffffff;
+    --cor-primaria: #5b3fa0;
+    --cor-primaria-escura: #442d7a;
+    --cor-texto: #222222;
+    --cor-destaque: #f2b705;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 600px;
+    margin: 1.5rem auto;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    background-color: var(--cor-card);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+main p {
+    margin: 0 0 1rem;
+}
+
+/* Mensagem de agradecimento */
+main p:first-child {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--cor-primaria-escura);
+}
+
+/* Bloco do contador */
+main p:nth-child(2) {
+    padding: 1rem;
+    border: 2px solid var(--cor-destaque);
+    border-radius: 8px;
+    background-color: #fffaf0;
+}
+
+#contador {
+    display: inline-block;
+    min-width: 2rem;
+    margin-left: 0.25rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cor-primaria-escura);
+}
+
+/* Link para voltar ao formulário, com aparência de botão */
+main a {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: var(--cor-primaria);
+    border-radius: 6px;
+}
+
+main a:hover,
+main a:focus {
+    background-color: var(--cor-primaria-escura);
+}
+
+main a:focus {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 2px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background-color: var(--cor-primaria-escura);
+    color: #ffffff;
+}
+
+footer p {
+    margin: 0.2rem 0;
+}
+
+@media (min-width: 700px) {
+    main {
+        padding: 2.5rem 2rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
